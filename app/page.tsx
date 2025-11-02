@@ -6,6 +6,16 @@ import earphone from "../public/homeEarphone.svg";
 import shopBtn from "../public/shopbtn.svg";
 import arrow from "../public/Path 2.svg";
 import speaker2 from "../public/image-speaker-zx9.png";
+import speaker3 from "../public/image-speaker-zx7.jpg";
+import speaker4 from "../public/homeTabletSpeaker.jpg";
+import speaker5 from "../public/homedesktopSpeaker.jpg";
+import earphone1 from "../public/mobile-earphones-yx1.jpg";
+import earphone2 from "../public/tabletearphones-yx1.jpg";
+import earphone3 from "../public/desktop-earphones-yx1.jpg";
+import man from "../public/man.png";
+import Footer from "./components/Footer";
+import Link from "next/link";
+import audiophile from "../public/audiophile.svg";
 
 export default function Home() {
   return (
@@ -176,6 +186,151 @@ export default function Home() {
           </button>
         </div>
       </div>
+      <div
+        className="
+    relative w-[300px] h-80 m-auto mt-8 rounded overflow-hidden
+    md:w-[689px] md:h-80
+    lg:w-[calc(100%-330px)] lg:mx-[165px] lg:mt-0 lg:h-80
+  "
+      >
+        {/* Mobile image */}
+        <Image
+          alt="ZX7 Speaker"
+          src={speaker3}
+          fill
+          className="object-cover md:hidden"
+        />
+
+        {/* Tablet image */}
+        <Image
+          alt="ZX7 Speaker"
+          src={speaker4}
+          fill
+          className="object-cover hidden md:block lg:hidden"
+        />
+
+        {/* Desktop image */}
+        <Image
+          alt="ZX7 Speaker"
+          src={speaker5}
+          fill
+          className="object-cover hidden lg:block"
+        />
+
+        {/* Content Overlay */}
+        <div
+          className="
+      relative z-10 w-[204px] h-[118px] gap-10 ml-5 mt-18 flex flex-col items-start justify-center
+      md:ml-10
+      lg:ml-20
+    "
+        >
+          <span className="text-[28px] font-semibold text-black">
+            ZX7 SPEAKER
+          </span>
+          <button className="w-40 h-12 text-[13px] border font-semibold text-center uppercase font-manrope">
+            See Product
+          </button>
+        </div>
+
+        {/* Optional overlay gradient if you want better text contrast */}
+        {/* <div className="absolute inset-0 bg-black/10"></div> */}
+      </div>
+
+      <div
+        className="w-[300px] m-auto  h-[424px] flex flex-col mt-8
+  md:w-[689px] md:h-80 md:rounded-lg md:flex-row md:justify-between md:mt-16
+  lg:w-[calc(100%-330px)] lg:h-80 lg:mx-[165px]  lg:rounded-lg lg:flex-row"
+      >
+        {/* Image Section */}
+        <div
+          className="relative w-[300px] h-[200px] rounded-lg overflow-hidden mt-0
+    md:w-[336px] md:h-80
+    lg:w-[540px] lg:h-80"
+        >
+          {/* Mobile image */}
+          <Image
+            alt="YX1 Earphones"
+            src={earphone1}
+            fill
+            className="object-cover md:hidden"
+          />
+
+          {/* Tablet image */}
+          <Image
+            alt="YX1 Earphones"
+            src={earphone2}
+            fill
+            className="object-cover hidden md:block lg:hidden"
+          />
+
+          {/* Desktop image */}
+          <Image
+            alt="YX1 Earphones"
+            src={earphone3}
+            fill
+            className="object-cover hidden lg:block"
+          />
+        </div>
+
+        {/* Text Section */}
+        <div
+          className="w-[300px] h-[200px] bg-[#F1F1F1] rounded-lg flex flex-col items-center justify-center gap-6 mt-8
+    md:w-[336px] md:h-80 md:ml-6 md:mt-0 md:justify-center
+    lg:w-[540px] lg:h-80 lg:ml-0 lg:justify-center lg:items-start lg:pl-20"
+        >
+          <div className="flex flex-col items-start justify-center">
+            <span className="font-semibold text-[28px]">YX1 EARPHONES</span>
+            <button className="w-48 h-12 text-[13px] border font-semibold text-center uppercase font-manrope mt-4">
+              See Product
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className=" relative
+      w-[300px] m-auto  h-[698px] flex flex-col mt-8 rounded
+  md:w-[689px] md:h-[633px] md:rounded-lg  md:mt-16
+  lg:w-[calc(100%-330px)] lg:h-[588px] lg:mx-[165px]  lg:rounded-lg lg:flex-row-reverse justify-between"
+      >
+        <div
+          className="w-[300px] h-[300px] mb-8 rounded-2xl overflow-hidden
+        md:w-[689px]  md:rounded-lg md:mb-0 
+        lg:w-[540px]  lg:h-[588px] lg:rounded-lg lg:mb-0 lg
+        "
+        >
+          <Image alt="man" src={man} className="md:object-cover md:w-full  " />
+        </div>
+        <div
+          className="
+        md:w-[689px]  md:rounded-lg md:mb-0 
+        lg:w-[540px]  lg:h-[588px] lg:rounded-lg lg:mb-0 lg
+        "
+        >
+          <div
+            className="flex flex-col items-center  justify-center  text-center
+            md:w-[573px] md:h-[270pd] md:justify-center md:text-center md:mx-auto md:mt-0
+          
+          lg:w-[445px] lg:h-[295px] lg:items-start lg:text-start lg:mt-30
+          "
+          >
+            <span className="uppercase text-[40px] font-semibold font-manrope ">
+              Bringing you the <span className="text-[#D87D4A]">best</span>{" "}
+              audio gear
+            </span>
+            <p className="text-[15px] md:text[15px]">
+              Located at the heart of New York City, Audiophile is the premier
+              store for high end headphones, earphones, speakers, and audio
+              accessories. We have a large showroom and luxury demonstration
+              rooms available for you to browse and experience a wide range of
+              our products. Stop by our store to meet some of the fantastic
+              people who make Audiophile the best place to buy your portable
+              audio equipment.
+            </p>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
